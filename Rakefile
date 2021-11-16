@@ -6,9 +6,8 @@ require 'rubocop/rake_task'
 task default: [:start]
 
 task :start do
-  start_torrent
 end
 
 RuboCop::RakeTask.new(:rubocop) do |t|
-  t.options = ['lib', '--fix']
+  t.options = ['lib', '-A', '-d']
 end
